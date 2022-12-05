@@ -148,7 +148,6 @@ const QuestionAndAnswer = () => {
               />
             </React.Fragment>
           ))}
-
           {/* <Answer/>
            */}
         </div>

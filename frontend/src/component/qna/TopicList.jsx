@@ -7,7 +7,10 @@ import { paginate } from "../../util/paginate";
 import * as questionService from "../../services/questionService";
 import * as authService from "../../services/authService";
 
+
 function Show({ arr, user, onDelete }) {
+
+
   return arr.map((val) => (
     <div key={val._id}>
       <Question
@@ -21,9 +24,12 @@ function Show({ arr, user, onDelete }) {
         user={user}
         onDelete={onDelete}
       />
+
     </div>
   ));
 }
+
+
 
 function TopicNavigation({
   location,
@@ -103,15 +109,19 @@ function TopicNavigation({
 
           {isShown === "all" && (
             <div>
-              <Show arr={location} user={user} onDelete={onDelete} />
+              <Show arr={location} user={user} onDelete={onDelete}
+
+              />
             </div>
           )}
 
           {isShown === "sql" && (
             <div>
+
               <Show
                 arr={location.filter((val) => val.topic === "sqll")}
                 user={user}
+
               />
             </div>
           )}
@@ -121,6 +131,7 @@ function TopicNavigation({
               <Show
                 arr={location.filter((val) => val.topic === "nosql")}
                 user={user}
+
               />
             </div>
           )}
@@ -130,6 +141,7 @@ function TopicNavigation({
               <Show
                 arr={location.filter((val) => val.topic === "beginner")}
                 user={user}
+
               />
             </div>
           )}
@@ -139,6 +151,7 @@ function TopicNavigation({
               <Show
                 arr={location.filter((val) => val.topic === "fo")}
                 user={user}
+
               />
             </div>
           )}
@@ -148,10 +161,12 @@ function TopicNavigation({
               <Show
                 arr={location.filter((val) => val.topic === "rm")}
                 user={user}
+
               />
             </div>
           )}
 
+          
           <Pagination
             itemsCount={itemsCount}
             pageSize={pageSize}
@@ -167,6 +182,7 @@ function TopicNavigation({
 }
 
 class TopicList extends Component {
+  state = { data: [], user: {}, };
   state = {
     data: [],
     user: {},
