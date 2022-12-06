@@ -119,7 +119,7 @@ function TopicNavigation({
             <div>
 
               <Show
-                arr={location.filter((val) => val.topic === "sqll")}
+                arr={location.filter((val) => val.topic === "sql")}
                 user={user}
 
               />

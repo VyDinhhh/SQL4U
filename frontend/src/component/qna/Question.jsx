@@ -22,9 +22,7 @@ export default function Question(props) {
     <div className='question-post'>
       <div className='avatar'>
         <img
-          src={
-            "https://galaxylands.com.vn/wp-content/uploads/2022/10/tieu-su-ca-si-mono-13.jpg"
-          }
+          src={"https://p.kindpng.com/picc/s/78-786207_user-avatar-png-user-avatar-icon-png-transparent.png"}
           alt='user avatar'
           className='user-avartar'
           id='user-avatar'
